@@ -29,7 +29,7 @@ public class ContractController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/apply")
     public ResponseEntity<String> applyForInsurance(@RequestBody Customer customer, @RequestParam int insuranceId) {
         try {
             Insurance insurance = new Insurance();
