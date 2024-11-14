@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: insurance_system
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/insurance_system
+        username: root
+        password: qwerty986!
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+server:
+    port: 8080
