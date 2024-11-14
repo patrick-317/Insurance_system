@@ -86,7 +86,7 @@ public class ContractUI {
             insurance.setId(insuranceId);
 
             ContractDTO contractDTO = contractService.applyForInsurance(customer, insurance);
-            System.out.println("보험 가입 신청이 완료되었습니다. 상태: " + contractDTO.getStatus().get);
+            System.out.println("보험 가입 신청이 완료되었습니다. 상태: " + contractDTO.getStatus());
         } catch (IOException e) {
             System.out.println("입력 오류가 발생했습니다: " + e.getMessage());
         } catch (NumberFormatException e) {
