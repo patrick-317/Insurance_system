@@ -1021,7 +1021,7 @@ wanted|schema||root|localhost|UPDATE|G</Grants>
     </schema>
     <schema id="289" parent="1" name="insurance_system">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-11-13.03:07:11</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-13.18:16:06</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="mysql">
@@ -1055,728 +1055,468 @@ wanted|schema||root|localhost|UPDATE|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="298" parent="289" name="Accident">
+    <table id="298" parent="289" name="Customer">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="299" parent="289" name="CalculationFormula">
+    <table id="299" parent="289" name="complaint">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="300" parent="289" name="Compensation">
+    <table id="300" parent="289" name="contract">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="301" parent="289" name="Contract">
+    <table id="301" parent="289" name="employee">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="302" parent="289" name="Customer">
+    <table id="302" parent="289" name="hold">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="303" parent="289" name="CustomerInfo">
+    <table id="303" parent="289" name="insurance">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="304" parent="289" name="Employee">
+    <table id="304" parent="289" name="refusal">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="305" parent="289" name="HomeCustomerInfo">
+    <table id="305" parent="289" name="request">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="306" parent="289" name="HomeFormula">
+    <table id="306" parent="289" name="underwriting">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="307" parent="289" name="Insurance">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="308" parent="289" name="Pay">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="309" parent="289" name="Sale">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="310" parent="289" name="WorkplaceCustomerInfo">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="311" parent="289" name="WorkplaceFormula">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="312" parent="298" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="307" parent="298" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="313" parent="298" name="contract_id">
-      <NotNull>1</NotNull>
+    <column id="308" parent="298" name="password">
       <Position>2</Position>
-      <StoredType>int|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="314" parent="298" name="calculationFormulaId">
-      <NotNull>1</NotNull>
+    <column id="309" parent="298" name="customerNumber">
       <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="310" parent="298" name="name">
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="311" parent="298" name="age">
+      <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="315" parent="298" name="date">
-      <Position>4</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="316" parent="298" name="location">
-      <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="317" parent="298" name="cause">
+    <column id="312" parent="298" name="account">
       <Position>6</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="318" parent="298" name="content">
+    <column id="313" parent="298" name="gender">
+      <NotNull>1</NotNull>
       <Position>7</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>enum(&apos;MALE&apos;, &apos;FEMALE&apos;)|0e</StoredType>
     </column>
-    <column id="319" parent="298" name="damage">
+    <column id="314" parent="298" name="address">
       <Position>8</Position>
-      <StoredType>bigint|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="320" parent="298" name="accountNumber">
+    <column id="315" parent="298" name="phoneNumber">
       <Position>9</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="321" parent="298" name="status">
+    <column id="316" parent="298" name="job">
       <Position>10</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <foreign-key id="322" parent="298" name="accident_ibfk_1">
-      <ColNames>contract_id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>Contract</RefTableName>
-    </foreign-key>
-    <foreign-key id="323" parent="298" name="accident_ibfk_2">
-      <ColNames>calculationFormulaId</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>CalculationFormula</RefTableName>
-    </foreign-key>
-    <index id="324" parent="298" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="325" parent="298" name="contract_id">
-      <ColNames>contract_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="326" parent="298" name="calculationFormulaId">
-      <ColNames>calculationFormulaId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="327" parent="298" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="328" parent="299" name="id">
-      <AutoIncrement>2</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="329" parent="299" name="name">
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="330" parent="299" name="riskLevelAccordingToPillarType">
-      <Position>3</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <column id="331" parent="299" name="riskLevelAccordingToRoofType">
-      <Position>4</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <column id="332" parent="299" name="riskLevelAccordingToOutwallType">
-      <Position>5</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <column id="333" parent="299" name="multiplierForMinCompensation">
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="334" parent="299" name="multiplierForMaxCompensation">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="335" parent="299" name="multiplierForPayment">
-      <Position>8</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <index id="336" parent="299" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="337" parent="299" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="338" parent="300" name="id">
-      <AutoIncrement>2</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="339" parent="300" name="accidentId">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="340" parent="300" name="calculationFormulaId">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="341" parent="300" name="compensation">
-      <Position>4</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="342" parent="300" name="compensation_ibfk_1">
-      <ColNames>accidentId</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>Accident</RefTableName>
-    </foreign-key>
-    <foreign-key id="343" parent="300" name="compensation_ibfk_2">
-      <ColNames>calculationFormulaId</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>CalculationFormula</RefTableName>
-    </foreign-key>
-    <index id="344" parent="300" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="345" parent="300" name="accidentId">
-      <ColNames>accidentId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="346" parent="300" name="calculationFormulaId">
-      <ColNames>calculationFormulaId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="347" parent="300" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="348" parent="301" name="id">
-      <AutoIncrement>2</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="349" parent="301" name="customer_info_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="350" parent="301" name="customer_id">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="351" parent="301" name="saleEmployee_id">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="352" parent="301" name="insurance_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="353" parent="301" name="calculationFormulaId">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="354" parent="301" name="term">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="355" parent="301" name="startDate">
-      <Position>8</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="356" parent="301" name="expirationDate">
-      <Position>9</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="357" parent="301" name="paymentFee">
-      <Position>10</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="358" parent="301" name="paymentCycle">
+    <column id="317" parent="298" name="email">
       <Position>11</Position>
-      <StoredType>int|0s</StoredType>
+      <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="359" parent="301" name="paymentDeadline">
+    <column id="318" parent="298" name="birthdate">
       <Position>12</Position>
-      <StoredType>timestamp|0s</StoredType>
+      <StoredType>date|0s</StoredType>
     </column>
-    <column id="360" parent="301" name="compensation">
+    <column id="319" parent="298" name="creditRating">
+      <NotNull>1</NotNull>
       <Position>13</Position>
-      <StoredType>int|0s</StoredType>
+      <StoredType>enum(&apos;FIRST&apos;, &apos;SECOND&apos;, &apos;THIRD&apos;, &apos;FOURTH&apos;, &apos;FIFTH&apos;)|0e</StoredType>
     </column>
-    <column id="361" parent="301" name="contractStatus">
+    <column id="320" parent="298" name="abroad">
+      <NotNull>1</NotNull>
       <Position>14</Position>
+      <StoredType>enum(&apos;DOMESTIC&apos;, &apos;ABROAD&apos;)|0e</StoredType>
+    </column>
+    <column id="321" parent="298" name="crime">
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+      <StoredType>enum(&apos;NO_RECORD&apos;, &apos;HAS_RECORD&apos;)|0e</StoredType>
+    </column>
+    <column id="322" parent="298" name="disease">
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+      <StoredType>enum(&apos;HAS_HISTORY&apos;, &apos;NO_HISTORY&apos;)|0e</StoredType>
+    </column>
+    <column id="323" parent="298" name="drink">
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+      <StoredType>enum(&apos;FREQUENT&apos;, &apos;MODERATE&apos;, &apos;RARE&apos;, &apos;NONE&apos;)|0e</StoredType>
+    </column>
+    <column id="324" parent="298" name="drive">
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+      <StoredType>enum(&apos;DRIVER&apos;, &apos;NON_DRIVER&apos;)|0e</StoredType>
+    </column>
+    <column id="325" parent="298" name="identityNum">
+      <Position>19</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="326" parent="298" name="military">
+      <NotNull>1</NotNull>
+      <Position>20</Position>
+      <StoredType>enum(&apos;COMPLETED&apos;, &apos;EXEMPTED&apos;, &apos;NONE&apos;)|0e</StoredType>
+    </column>
+    <column id="327" parent="298" name="contractStatus">
+      <DefaultExpression>&apos;PENDING&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>21</Position>
+      <StoredType>enum(&apos;ACTIVE&apos;, &apos;PENDING&apos;, &apos;REJECTED&apos;, &apos;EXPIRED&apos;)|0e</StoredType>
+    </column>
+    <index id="328" parent="298" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="329" parent="298" name="customerNumber">
+      <ColNames>customerNumber</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="330" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="331" parent="298" name="customerNumber">
+      <UnderlyingIndexName>customerNumber</UnderlyingIndexName>
+    </key>
+    <column id="332" parent="299" name="customerID">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="333" parent="299" name="employeeID">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="334" parent="299" name="customerInfo">
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="335" parent="299" name="date">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="336" parent="299" name="department">
+      <Position>5</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <foreign-key id="362" parent="301" name="contract_ibfk_1">
-      <ColNames>customer_info_id</ColNames>
+    <column id="337" parent="299" name="details">
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="338" parent="299" name="title">
+      <Position>7</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <foreign-key id="339" parent="299" name="complaint_ibfk_1">
+      <ColNames>customerID</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>CustomerInfo</RefTableName>
+      <RefTableName>customer</RefTableName>
     </foreign-key>
-    <foreign-key id="363" parent="301" name="contract_ibfk_2">
+    <foreign-key id="340" parent="299" name="complaint_ibfk_2">
+      <ColNames>employeeID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>employee</RefTableName>
+    </foreign-key>
+    <index id="341" parent="299" name="PRIMARY">
+      <ColNames>customerID
+employeeID
+date</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="342" parent="299" name="employeeID">
+      <ColNames>employeeID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="343" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="344" parent="300" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="345" parent="300" name="customer_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="346" parent="300" name="insurance_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="347" parent="300" name="contract_date">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="348" parent="300" name="status">
+      <Position>5</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <foreign-key id="349" parent="300" name="contract_ibfk_1">
       <ColNames>customer_id</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>Customer</RefTableName>
+      <RefTableName>customer</RefTableName>
     </foreign-key>
-    <foreign-key id="364" parent="301" name="contract_ibfk_3">
-      <ColNames>saleEmployee_id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>Employee</RefTableName>
-    </foreign-key>
-    <foreign-key id="365" parent="301" name="contract_ibfk_4">
+    <foreign-key id="350" parent="300" name="contract_ibfk_2">
       <ColNames>insurance_id</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>Insurance</RefTableName>
+      <RefTableName>insurance</RefTableName>
     </foreign-key>
-    <foreign-key id="366" parent="301" name="contract_ibfk_5">
-      <ColNames>calculationFormulaId</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>CalculationFormula</RefTableName>
-    </foreign-key>
-    <index id="367" parent="301" name="PRIMARY">
+    <index id="351" parent="300" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="368" parent="301" name="customer_info_id">
-      <ColNames>customer_info_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="369" parent="301" name="customer_id">
+    <index id="352" parent="300" name="customer_id">
       <ColNames>customer_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="370" parent="301" name="saleEmployee_id">
-      <ColNames>saleEmployee_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="371" parent="301" name="insurance_id">
+    <index id="353" parent="300" name="insurance_id">
       <ColNames>insurance_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="372" parent="301" name="calculationFormulaId">
-      <ColNames>calculationFormulaId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="373" parent="301" name="PRIMARY">
+    <key id="354" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="374" parent="302" name="id">
+    <column id="355" parent="301" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>int|0s</StoredType>
     </column>
-    <column id="375" parent="302" name="password">
+    <column id="356" parent="301" name="accountNum">
       <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="376" parent="302" name="name">
+    <column id="357" parent="301" name="department">
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="377" parent="302" name="email">
+    <column id="358" parent="301" name="email">
       <Position>4</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="378" parent="302" name="phoneNumber">
+    <column id="359" parent="301" name="employeeID">
       <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="379" parent="302" name="address">
+    <column id="360" parent="301" name="HP">
       <Position>6</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="361" parent="301" name="name">
+      <Position>7</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="380" parent="302" name="hasHome">
-      <Position>7</Position>
-      <StoredType>tinyint(1)|0s</StoredType>
-    </column>
-    <column id="381" parent="302" name="hasWorkplace">
+    <column id="362" parent="301" name="position">
       <Position>8</Position>
-      <StoredType>tinyint(1)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <index id="382" parent="302" name="PRIMARY">
+    <index id="363" parent="301" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="383" parent="302" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="384" parent="303" name="id">
-      <AutoIncrement>2</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="385" parent="303" name="customer_id">
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="386" parent="303" name="squareMeter">
-      <Position>3</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="387" parent="303" name="pillarType">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="388" parent="303" name="roofType">
-      <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="389" parent="303" name="outwallType">
-      <Position>6</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="390" parent="303" name="PRIMARY">
-      <ColNames>id</ColNames>
+    <index id="364" parent="301" name="employeeID">
+      <ColNames>employeeID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="391" parent="303" name="PRIMARY">
+    <key id="365" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="392" parent="304" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="393" parent="304" name="password">
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="394" parent="304" name="department">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="395" parent="304" name="name">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="396" parent="304" name="email">
-      <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="397" parent="304" name="phoneNumber">
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="398" parent="304" name="rank">
-      <Position>7</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="399" parent="304" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="400" parent="304" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    <key id="366" parent="301" name="employeeID">
+      <UnderlyingIndexName>employeeID</UnderlyingIndexName>
     </key>
-    <column id="401" parent="305" name="id">
+    <column id="367" parent="302" name="customerID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="402" parent="305" name="houseType">
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="403" parent="305" name="residenceType">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <foreign-key id="404" parent="305" name="homecustomerinfo_ibfk_1">
-      <ColNames>id</ColNames>
+    <foreign-key id="368" parent="302" name="hold_ibfk_1">
+      <ColNames>customerID</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>CustomerInfo</RefTableName>
+      <RefTableName>customer</RefTableName>
     </foreign-key>
-    <index id="405" parent="305" name="PRIMARY">
-      <ColNames>id</ColNames>
+    <index id="369" parent="302" name="PRIMARY">
+      <ColNames>customerID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="406" parent="305" name="PRIMARY">
+    <key id="370" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="407" parent="306" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="371" parent="303" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="408" parent="306" name="riskLevelAccordingToResidenceType">
+    <column id="372" parent="303" name="name">
       <Position>2</Position>
-      <StoredType>blob|0s</StoredType>
+      <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="409" parent="306" name="riskLevelAccordingToHouseType">
+    <column id="373" parent="303" name="description">
       <Position>3</Position>
-      <StoredType>blob|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="410" parent="306" name="riskLevelAccordingToSquareMeter">
+    <column id="374" parent="303" name="premium">
       <Position>4</Position>
-      <StoredType>blob|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="411" parent="306" name="riskLevelAccordingToCompensation">
+    <column id="375" parent="303" name="coverage">
       <Position>5</Position>
-      <StoredType>blob|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <foreign-key id="412" parent="306" name="homeformula_ibfk_1">
-      <ColNames>id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>CalculationFormula</RefTableName>
-    </foreign-key>
-    <index id="413" parent="306" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="414" parent="306" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="415" parent="307" name="id">
-      <AutoIncrement>2</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="416" parent="307" name="calculationFormulaId">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="417" parent="307" name="name">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="418" parent="307" name="type">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="419" parent="307" name="target">
-      <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="420" parent="307" name="compensationCondition">
+    <column id="376" parent="303" name="term">
       <Position>6</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="421" parent="307" name="notCompensationCondition">
+    <column id="377" parent="303" name="maxAge">
       <Position>7</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="422" parent="307" name="status">
+    <column id="378" parent="303" name="exclusions">
       <Position>8</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <foreign-key id="423" parent="307" name="insurance_ibfk_1">
-      <ColNames>calculationFormulaId</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>CalculationFormula</RefTableName>
-    </foreign-key>
-    <index id="424" parent="307" name="PRIMARY">
+    <column id="379" parent="303" name="type">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <index id="380" parent="303" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="425" parent="307" name="calculationFormulaId">
-      <ColNames>calculationFormulaId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="426" parent="307" name="PRIMARY">
+    <key id="381" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="427" parent="308" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="382" parent="304" name="customerID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="428" parent="308" name="contract_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="429" parent="308" name="cardNumber">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <foreign-key id="430" parent="308" name="pay_ibfk_1">
-      <ColNames>contract_id</ColNames>
+    <foreign-key id="383" parent="304" name="refusal_ibfk_1">
+      <ColNames>customerID</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>Contract</RefTableName>
+      <RefTableName>customer</RefTableName>
     </foreign-key>
-    <index id="431" parent="308" name="PRIMARY">
-      <ColNames>id</ColNames>
+    <index id="384" parent="304" name="PRIMARY">
+      <ColNames>customerID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="432" parent="308" name="contract_id">
-      <ColNames>contract_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="433" parent="308" name="PRIMARY">
+    <key id="385" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="434" parent="309" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="386" parent="305" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="435" parent="309" name="customerId">
-      <NotNull>1</NotNull>
+    <column id="387" parent="305" name="customerID">
       <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>int|0s</StoredType>
     </column>
-    <column id="436" parent="309" name="saleEmployee_id">
-      <NotNull>1</NotNull>
+    <column id="388" parent="305" name="accidentInfo">
       <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="437" parent="309" name="insuranceId">
+    <column id="389" parent="305" name="beneficiaryInfo">
       <Position>4</Position>
-      <StoredType>int|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="438" parent="309" name="message">
+    <column id="390" parent="305" name="bill">
       <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <foreign-key id="439" parent="309" name="sale_ibfk_1">
-      <ColNames>customerId</ColNames>
+    <column id="391" parent="305" name="memberInfo">
+      <Position>6</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="392" parent="305" name="SSN">
+      <Position>7</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <foreign-key id="393" parent="305" name="request_ibfk_1">
+      <ColNames>customerID</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>Customer</RefTableName>
+      <RefTableName>customer</RefTableName>
     </foreign-key>
-    <foreign-key id="440" parent="309" name="sale_ibfk_2">
-      <ColNames>saleEmployee_id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>Employee</RefTableName>
-    </foreign-key>
-    <index id="441" parent="309" name="PRIMARY">
+    <index id="394" parent="305" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="442" parent="309" name="customerId">
-      <ColNames>customerId</ColNames>
+    <index id="395" parent="305" name="customerID">
+      <ColNames>customerID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="443" parent="309" name="saleEmployee_id">
-      <ColNames>saleEmployee_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="444" parent="309" name="PRIMARY">
+    <key id="396" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="445" parent="310" name="id">
+    <column id="397" parent="306" name="customerID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="446" parent="310" name="usage">
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="447" parent="310" name="floor">
-      <Position>3</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="448" parent="310" name="workplacecustomerinfo_ibfk_1">
-      <ColNames>id</ColNames>
+    <foreign-key id="398" parent="306" name="underwriting_ibfk_1">
+      <ColNames>customerID</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>CustomerInfo</RefTableName>
+      <RefTableName>customer</RefTableName>
     </foreign-key>
-    <index id="449" parent="310" name="PRIMARY">
-      <ColNames>id</ColNames>
+    <index id="399" parent="306" name="PRIMARY">
+      <ColNames>customerID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="450" parent="310" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="451" parent="311" name="id">
-      <AutoIncrement>2</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="452" parent="311" name="riskLevelAccordingToUsage">
-      <Position>2</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <column id="453" parent="311" name="riskLevelAccordingToFloor">
-      <Position>3</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <column id="454" parent="311" name="riskLevelAccordingToSquareFeet">
-      <Position>4</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <column id="455" parent="311" name="riskLevelAccordingToCompensation">
-      <Position>5</Position>
-      <StoredType>blob|0s</StoredType>
-    </column>
-    <foreign-key id="456" parent="311" name="workplaceformula_ibfk_1">
-      <ColNames>id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>CalculationFormula</RefTableName>
-    </foreign-key>
-    <index id="457" parent="311" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="458" parent="311" name="PRIMARY">
+    <key id="400" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

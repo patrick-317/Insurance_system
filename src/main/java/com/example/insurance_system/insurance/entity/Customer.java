@@ -1,5 +1,6 @@
 package com.example.insurance_system.insurance.entity;
 
+import com.example.insurance_system.insurance.entity.enumeration.Customer.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,19 +13,19 @@ public class Customer {
     private String name;
     private int age;
     private String account;
-    private String gender;
     private String address;
     private String phoneNumber;
     private String job;
     private String email;
     private String birthdate;
-    private String creditRating;
-    private String abroad;
-    private String contractStatus;
-    private String crime;
-    private String disease;
-    private boolean drink;
-    private String drive;
     private String identityNum;
-    private boolean military;
+    private Gender gender;
+    private CreditRating creditRating;
+    private Abroad abroad;
+    private ContractStatus contractStatus;
+    private Crime crime;
+    private Disease disease;
+    private Drink drink;
+    private Drive drive;
+    private Military military;
 }

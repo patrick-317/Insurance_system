@@ -7,4 +7,5 @@ import java.util.List;
 @Mapper
 public interface InsuranceMapper {
     List<Insurance> selectInsuranceList();
+    List<Insurance> findByType(String type);
 }
