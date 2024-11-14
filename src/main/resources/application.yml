@@ -8,5 +8,8 @@ spring:
         password: qwerty986!
 mybatis:
     mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.example.insurance_system.insurance.entity
+    configuration:
+        map-underscore-to-camel-case: true
 server:
     port: 8080
