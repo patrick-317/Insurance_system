@@ -19,8 +19,8 @@ public class ContractController {
         this.contractService = contractService;
     }
 
-    @GetMapping("/insurance/{typeChoice}")
-    public ResponseEntity<List<Insurance>> getInsuranceList(@PathVariable String typeChoice) {
+    @GetMapping("/insurance")
+    public ResponseEntity<List<Insurance>> getInsuranceList(@RequestParam String typeChoice) {
         try {
             List<Insurance> insuranceList = contractService.getInsuranceListByType(typeChoice);
             return ResponseEntity.ok(insuranceList);
@@ -30,10 +30,10 @@ public class ContractController {
     }
 
     @PostMapping("/apply")
-    public ResponseEntity<String> applyForInsurance(@RequestBody Customer customer, @RequestParam int insuranceId) {
+    public ResponseEntity<String> applyForInsurance(@RequestParam int customerId, @RequestParam int insuranceId) {
         try {
-            Insurance insurance = new Insurance();
-            insurance.setId(insuranceId);
+            Customer customer = contractService.findCustomerById(customerId);
+            Insurance insurance = contractService.findInsuranceById(insuranceId);
             ContractDTO contractDTO = contractService.applyForInsurance(customer, insurance);
             return ResponseEntity.ok("보험 계약이 성공적으로 생성되었습니다. 상태: " + contractDTO.getStatus());
         } catch (IllegalArgumentException e) {

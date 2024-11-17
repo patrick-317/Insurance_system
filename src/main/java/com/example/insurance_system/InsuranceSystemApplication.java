@@ -9,9 +9,8 @@ import org.springframework.context.ApplicationContext;
 public class InsuranceSystemApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(InsuranceSystemApplication.class, args);
-        ContractUI contractUI = context.getBean(ContractUI.class);
-        contractUI.displayMenu();
+        SpringApplication.run(InsuranceSystemApplication.class, args);
+
     }
 
 }

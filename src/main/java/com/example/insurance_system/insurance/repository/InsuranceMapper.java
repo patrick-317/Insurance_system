@@ -8,4 +8,6 @@ import java.util.List;
 public interface InsuranceMapper {
     List<Insurance> selectInsuranceList();
     List<Insurance> findByType(String type);
+
+    Insurance findById(int insuranceId);
 }

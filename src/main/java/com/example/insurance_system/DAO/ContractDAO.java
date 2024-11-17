@@ -36,4 +36,8 @@ public class ContractDAO {
     public List<Insurance> findInsuranceByType(String type) {
         return insuranceMapper.findByType(type);
     }
+
+    public Insurance findInsuranceById(int insuranceId) {
+        return insuranceMapper.findById(insuranceId);
+    }
 }
