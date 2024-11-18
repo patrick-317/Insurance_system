@@ -6,11 +6,13 @@ import com.example.insurance_system.insurance.entity.Insurance;
 import com.example.insurance_system.insurance.repository.ContractMapper;
 import com.example.insurance_system.insurance.repository.CustomerMapper;
 import com.example.insurance_system.insurance.repository.InsuranceMapper;
+import lombok.Getter;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@Getter
 public class ContractDAO {
 
     private final ContractMapper contractMapper;
@@ -40,4 +42,5 @@ public class ContractDAO {
     public Insurance findInsuranceById(int insuranceId) {
         return insuranceMapper.findById(insuranceId);
     }
+
 }
