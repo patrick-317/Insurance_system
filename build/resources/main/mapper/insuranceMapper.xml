@@ -12,5 +12,10 @@
         FROM insurance
         WHERE id = #{insuranceId}
     </select>
+    <select id="findById" resultType="com.example.insurance_system.insurance.entity.Insurance">
+        SELECT *
+        FROM insurance
+        WHERE id = #{id}
+    </select>
 
 </mapper>

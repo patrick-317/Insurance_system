@@ -13,4 +13,6 @@ public interface CustomerMapper {
     Customer findByIdAndPassword(@Param("email")String email, @Param("password")String password);
 
     List<Customer> selectCustomerList();
+
+    void insertCustomer(Customer customer);
 }

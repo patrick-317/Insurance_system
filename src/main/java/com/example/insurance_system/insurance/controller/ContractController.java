@@ -1,11 +1,9 @@
 package com.example.insurance_system.insurance.controller;
 
-import com.example.insurance_system.DTO.ContractDTO;
 import com.example.insurance_system.insurance.entity.Contract;
 import com.example.insurance_system.insurance.entity.Customer;
 import com.example.insurance_system.insurance.entity.Insurance;
 import com.example.insurance_system.insurance.service.ContractService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,12 +30,10 @@ public class ContractController {
     }
 
     @PostMapping("/apply")
-    public ResponseEntity<String> applyForInsurance(@RequestParam int customerId, @RequestParam int insuranceId) {
+    public ResponseEntity<String> applyForInsurance(@RequestBody Customer customer, @RequestParam int insuranceId) {
         try {
-            Customer customer = contractService.findCustomerById(customerId);
-            Insurance insurance = contractService.findInsuranceById(insuranceId);
-            ContractDTO contractDTO = contractService.applyForInsurance(customer, insurance);
-            return ResponseEntity.ok("보험 계약이 성공적으로 생성되었습니다. 상태: " + contractDTO.getStatus());
+            contractService.applyForInsurance(customer, insuranceId);
+            return ResponseEntity.ok("보험 가입이 성공적으로 완료되었습니다.");
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

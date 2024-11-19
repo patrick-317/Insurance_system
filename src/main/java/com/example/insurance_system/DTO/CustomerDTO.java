@@ -1,4 +1,4 @@
-package com.example.insurance_system.insurance.entity;
+package com.example.insurance_system.DTO;
 
 import com.example.insurance_system.insurance.entity.enumeration.Customer.*;
 import lombok.Getter;
@@ -6,9 +6,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Customer {
+public class CustomerDTO {
     private int id;
     private String password;
+    private String customerNumber;
     private String name;
     private int age;
     private String account;
@@ -27,4 +28,5 @@ public class Customer {
     private Drink drink;
     private Drive drive;
     private Military military;
+
 }

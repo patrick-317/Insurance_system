@@ -6,32 +6,33 @@
     <select id="checkCustomerInsuranceContract" parameterType="map" resultType="boolean">
         SELECT COUNT(1) > 0
         FROM contract
-        WHERE customer_id = #{customerId} AND insurance_id = #{insuranceId}
+        WHERE customerId = #{customerId} AND insuranceId = #{insuranceId}
     </select>
 
     <!-- 계약 정보 조회 -->
     <select id="getContractByCustomerAndInsurance" parameterType="map" resultType="com.example.insurance_system.insurance.entity.Contract">
         SELECT * FROM contract
-        WHERE customer_id = #{customerId} AND insurance_id = #{insuranceId}
+        WHERE customerId = #{customerId} AND insuranceId = #{insuranceId}
     </select>
 
     <!-- 계약 저장 -->
-    <insert id="insertContract" parameterType="com.example.insurance_system.insurance.entity.Contract">
-        INSERT INTO contract (customer_id, insurance_id, contract_date, amount, status)
-        VALUES (#{customerId}, #{insuranceId}, #{contractDate}, #{amount}, #{status})
+    <insert id="insertContract" parameterType="com.example.insurance_system.DTO.ContractDTO">
+        INSERT INTO contract (customerId, insuranceId, contractDate, premium)
+        VALUES (#{customerId}, #{insuranceId}, #{contractDate}, #{premium})
     </insert>
+
 
     <!-- 계약 정보 업데이트 -->
     <update id="updateContract" parameterType="com.example.insurance_system.insurance.entity.Contract">
         UPDATE contract
-        SET contract_date = #{contractDate}, amount = #{amount}, status = #{status}
-        WHERE customer_id = #{customerId} AND insurance_id = #{insuranceId}
+        SET contractDate = #{contractDate}, premium = #{premium}, contractStatus = #{contractStatus}
+        WHERE customerId = #{customerId} AND insuranceId = #{insuranceId}
     </update>
 
     <!-- 계약 삭제 -->
     <delete id="deleteContract" parameterType="map">
         DELETE FROM contract
-        WHERE customer_id = #{customerId} AND insurance_id = #{insuranceId}
+        WHERE customerId = #{customerId} AND insuranceId = #{insuranceId}
     </delete>
 
 </mapper>

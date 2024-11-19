@@ -26,7 +26,7 @@ public class PaymentService {
         }
 
         // 지급 금액 계산 (보험료를 기반으로 지급 금액 계산)
-        String premium = contract.getAmount(); // 계약에서 금액 가져오기
+        String premium = contract.getPremium(); // 계약에서 금액 가져오기
         if (premium == null || premium.isEmpty()) {
             throw new RuntimeException("Premium amount is invalid.");
         }
