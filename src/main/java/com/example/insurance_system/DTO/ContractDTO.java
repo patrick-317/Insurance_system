@@ -12,4 +12,6 @@ public class ContractDTO {
     private String contractDate;
     private String premium;
     private ContractStatus contractStatus;
+
+    private CustomerDTO customerDTO;
 }

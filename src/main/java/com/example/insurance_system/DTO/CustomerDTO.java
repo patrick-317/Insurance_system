@@ -9,7 +9,6 @@ import lombok.Setter;
 public class CustomerDTO {
     private int id;
     private String password;
-    private String customerNumber;
     private String name;
     private int age;
     private String account;

@@ -7,7 +7,8 @@
         FROM customer
     </select>
     <insert id="insertCustomer" parameterType="com.example.insurance_system.insurance.entity.Customer" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO customer (id, password, name, age, account, address, phoneNumber, job, email, birthdate, identityNum, gender, creditRating, abroad, crime, disease, drink, drive, military)
-        VALUES (#{id}, #{password}, #{name}, #{age}, #{account}, #{address}, #{phoneNumber}, #{job}, #{email}, #{birthdate}, #{identityNum}, #{gender}, #{creditRating}, #{abroad}, #{crime}, #{disease}, #{drink}, #{drive}, #{military})
+        INSERT INTO customer (password, name, age, account, address, phoneNumber, job, email, birthdate, identityNum, gender, creditRating, abroad, crime, disease, drink, drive, military)
+        VALUES (#{password}, #{name}, #{age}, #{account}, #{address}, #{phoneNumber}, #{job}, #{email}, #{birthdate}, #{identityNum}, #{gender}, #{creditRating}, #{abroad}, #{crime}, #{disease}, #{drink}, #{drive}, #{military})
     </insert>
+
 </mapper>

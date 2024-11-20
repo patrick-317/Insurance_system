@@ -1,8 +1,8 @@
 package com.example.insurance_system.insurance.service;
 
 import com.example.insurance_system.DTO.ContractDTO;
+import com.example.insurance_system.DTO.CustomerDTO;
 import com.example.insurance_system.insurance.entity.Contract;
-import com.example.insurance_system.insurance.entity.Customer;
 import com.example.insurance_system.insurance.entity.Insurance;
 import com.example.insurance_system.insurance.entity.enumeration.Insurance.InsuranceType;
 import com.example.insurance_system.insurance.repository.ContractMapper;
@@ -31,7 +31,8 @@ public class ContractService {
         this.customerMapper = customerMapper;
     }
     @Transactional
-    public void applyForInsurance(Customer customer, int insuranceId) {
+    public void applyForInsurance(CustomerDTO customer, int insuranceId) {
+        System.out.println("Customer Gender: " + customer.getGender());
         Insurance insurance = findInsuranceById(insuranceId);
         customerMapper.insertCustomer(customer);
 
