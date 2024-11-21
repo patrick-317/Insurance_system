@@ -2,10 +2,13 @@ package com.example.insurance_system.insurance.repository;
 
 import com.example.insurance_system.DTO.ContractDTO;
 import com.example.insurance_system.insurance.entity.Contract;
+import com.example.insurance_system.insurance.entity.enumeration.Customer.ContractStatus;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 @Mapper
 public interface ContractMapper {
@@ -19,4 +22,8 @@ public interface ContractMapper {
     void updateContract(Contract contract);
 
     void deleteContract(Integer customerId, Integer insuranceId);
+
+    List<Contract> findByContractStatus(ContractStatus contractStatus);
+
+    Optional<Contract> findById(int contractId);
 }

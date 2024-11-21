@@ -4,6 +4,7 @@ import com.example.insurance_system.DTO.ContractDTO;
 import com.example.insurance_system.DTO.CustomerDTO;
 import com.example.insurance_system.insurance.entity.Contract;
 import com.example.insurance_system.insurance.entity.Insurance;
+import com.example.insurance_system.insurance.entity.enumeration.Customer.ContractStatus;
 import com.example.insurance_system.insurance.entity.enumeration.Insurance.InsuranceType;
 import com.example.insurance_system.insurance.repository.ContractMapper;
 import com.example.insurance_system.insurance.repository.CustomerMapper;
@@ -107,5 +108,41 @@ public class ContractService {
     // 계약 삭제
     public void deleteContract(Integer customerId, Integer insuranceId) {
         contractMapper.deleteContract(customerId, insuranceId);
+    }
+
+    @Autowired
+    private ContractMapper contractRepository;
+
+    // 계약 승인 메서드
+    @Transactional
+    public void approveContract(int contractId) {
+        Contract contract = contractRepository.findById(contractId)
+                .orElseThrow(() -> new IllegalArgumentException("Contract not found"));
+
+        if (contract.getContractStatus() == ContractStatus.PENDING) {
+            contract.setContractStatus(ContractStatus.ACTIVE); // 승인
+            contractRepository.updateContract(contract);
+        } else {
+            throw new IllegalStateException("Contract cannot be approved, current status: " + contract.getContractStatus());
+        }
+    }
+
+    // 계약 거절 메서드
+    @Transactional
+    public void rejectContract(int contractId) {
+        Contract contract = contractRepository.findById(contractId)
+                .orElseThrow(() -> new IllegalArgumentException("Contract not found"));
+
+        if (contract.getContractStatus() == ContractStatus.PENDING) {
+            contract.setContractStatus(ContractStatus.REJECTED); // 거절
+            contractRepository.updateContract(contract);
+        } else {
+            throw new IllegalStateException("Contract cannot be rejected, current status: " + contract.getContractStatus());
+        }
+    }
+
+    // 모든 PENDING 계약 조회 메서드
+    public List<Contract> findPendingContracts() {
+        return contractRepository.findByContractStatus(ContractStatus.PENDING);
     }
 }

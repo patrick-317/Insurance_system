@@ -4,6 +4,8 @@ import com.example.insurance_system.insurance.entity.enumeration.Customer.Contra
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Optional;
+
 @Getter
 @Setter
 public class Contract {
@@ -13,4 +15,5 @@ public class Contract {
     private String contractDate;   // 계약 날짜 (String 형식으로 저장)
     private String premium;         // 보험료 (String 형식으로 저장)
     private ContractStatus contractStatus;
+
 }
