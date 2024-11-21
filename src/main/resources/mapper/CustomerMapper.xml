@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.insurance_system.insurance.repository.CustomerMapper">
+
+    <select id="selectCustomerList" resultType="com.example.insurance_system.insurance.entity.Customer">
+        SELECT *
+        FROM customer
+    </select>
+    <insert id="insertCustomer" parameterType="com.example.insurance_system.insurance.entity.Customer" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO customer (password, name, age, account, address, phoneNumber, job, email, birthdate, identityNum, gender, creditRating, abroad, crime, disease, drink, drive, military)
+        VALUES (#{password}, #{name}, #{age}, #{account}, #{address}, #{phoneNumber}, #{job}, #{email}, #{birthdate}, #{identityNum}, #{gender}, #{creditRating}, #{abroad}, #{crime}, #{disease}, #{drink}, #{drive}, #{military})
+    </insert>
+
+
+
+</mapper>
