@@ -45,10 +45,8 @@ public class ContractService {
         contractMapper.insertContract(contractDTO);
     }
 
-    public List<Insurance> getInsuranceListByType(String typeChoice) {
-        InsuranceType insuranceType = typeChoiceToInsuranceType(typeChoice);
-        String insuranceTypeName = insuranceType.getName();
-        return insuranceMapper.findByType(insuranceTypeName);
+    public List<Insurance> getInsuranceListByType(String typeName) {
+        return insuranceMapper.findByType(typeName);
     }
 
 

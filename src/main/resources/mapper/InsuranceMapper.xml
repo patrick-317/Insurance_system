@@ -9,7 +9,7 @@
     <select id="findByType" resultType="com.example.insurance_system.insurance.entity.Insurance">
         SELECT *
         FROM insurance
-        WHERE name = #{type}
+        WHERE insuranceType = #{type}
     </select>
     <!-- 보험 정보 조회 -->
     <select id="getInsuranceById" resultType="com.example.insurance_system.insurance.entity.Insurance">

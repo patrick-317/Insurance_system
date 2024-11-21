@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/contracts")
@@ -20,10 +21,11 @@ public class ContractController {
         this.contractService = contractService;
     }
 
-    @GetMapping("/insurance")
-    public ResponseEntity<List<Insurance>> getInsuranceList(@RequestParam String typeChoice) {
+    @PostMapping("/insurance")
+    public ResponseEntity<List<Insurance>> getInsuranceList(@RequestBody Map<String, String> requestBody) {
         try {
-            List<Insurance> insuranceList = contractService.getInsuranceListByType(typeChoice);
+            String typeName = requestBody.get("type");
+            List<Insurance> insuranceList = contractService.getInsuranceListByType(typeName);
             return ResponseEntity.ok(insuranceList);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(null);
