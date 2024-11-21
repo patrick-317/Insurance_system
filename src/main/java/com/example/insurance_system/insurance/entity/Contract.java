@@ -1,6 +1,6 @@
 package com.example.insurance_system.insurance.entity;
 
-import lombok.Data;
+import com.example.insurance_system.insurance.entity.enumeration.Customer.ContractStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +11,6 @@ public class Contract {
     private Integer customerId;    // 고객 ID
     private Integer insuranceId;   // 보험 ID
     private String contractDate;   // 계약 날짜 (String 형식으로 저장)
-    private String amount;         // 보험료 (String 형식으로 저장)
-    private String status;         // 계약 상태 (예: 'ACTIVE', 'INACTIVE')
+    private String premium;         // 보험료 (String 형식으로 저장)
+    private String contractStatus; // request / approve / reject 3가지 상태
 }

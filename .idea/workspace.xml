@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b7e925-00df-414f-8dbc-304270ff925e" name="Changes" comment="">
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
+>>>>>>> caf0b832bef0866ab5fd3fada8b8bdcf239fb450
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/DTO/ContractDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/DTO/ContractDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/controller/ContractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/controller/ContractController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/repository/CustomerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/repository/CustomerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/service/ContractService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/service/ContractService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/mapper/customerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mapper/customerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/DTO/ContractDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/DTO/ContractDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/DTO/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/DTO/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/repository/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/repository/CustomerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" afterDir="false" />
+>>>>>>> caf0b832bef0866ab5fd3fada8b8bdcf239fb450
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +82,11 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/patrick-317/Insurance_system.git&quot;,
+<<<<<<< HEAD
     &quot;accountId&quot;: &quot;0d622548-c4ec-4761-9990-856c1d3045c5&quot;
+=======
+    &quot;accountId&quot;: &quot;f5bea322-ad3e-454f-a43c-13724f36da88&quot;
+>>>>>>> caf0b832bef0866ab5fd3fada8b8bdcf239fb450
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -103,6 +130,12 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="VO.Insurance" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/entity/enumeration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.insurance_system.DTO" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.InsuranceSystemApplication">
@@ -181,8 +214,14 @@
       <workItem from="1731466884818" duration="12034000" />
       <workItem from="1731514288909" duration="17191000" />
       <workItem from="1731869362773" duration="5520000" />
+<<<<<<< HEAD
       <workItem from="1731906293660" duration="2278000" />
       <workItem from="1732169673376" duration="993000" />
+=======
+      <workItem from="1731906293660" duration="1735000" />
+      <workItem from="1731962159432" duration="18537000" />
+      <workItem from="1732082483287" duration="334000" />
+>>>>>>> caf0b832bef0866ab5fd3fada8b8bdcf239fb450
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-package com.example.insurance_system.insurance.entity;
+package com.example.insurance_system.DTO;
 
 import com.example.insurance_system.insurance.entity.enumeration.Insurance.InsuranceType;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Insurance {
+public class InsuranceDTO {
     private int id;
     private String name;
     private String description;

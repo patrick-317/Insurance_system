@@ -1,5 +1,6 @@
 package com.example.insurance_system.insurance.repository;
 
+import com.example.insurance_system.DTO.CustomerDTO;
 import com.example.insurance_system.insurance.entity.Customer;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -13,4 +14,6 @@ public interface CustomerMapper {
     Customer findByIdAndPassword(@Param("email")String email, @Param("password")String password);
 
     List<Customer> selectCustomerList();
+
+    void insertCustomer(CustomerDTO customer);
 }
