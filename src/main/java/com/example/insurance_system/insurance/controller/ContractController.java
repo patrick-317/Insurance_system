@@ -69,21 +69,5 @@ public class ContractController {
     public void deleteContract(@PathVariable Integer customerId, @PathVariable Integer insuranceId) {
         contractService.deleteContract(customerId, insuranceId);
     }
-    // 계약 승인
-    @PutMapping("/approve/{contractId}")
-    public void approveContract(@PathVariable int contractId) {
-        contractService.approveContract(contractId);
-    }
 
-    // 계약 거절
-    @PutMapping("/reject/{contractId}")
-    public void rejectContract(@PathVariable int contractId) {
-        contractService.rejectContract(contractId);
-    }
-
-    // PENDING 계약 조회
-    @GetMapping("/pending")
-    public List<Contract> getPendingContracts() {
-        return contractService.findPendingContracts();
-    }
 }

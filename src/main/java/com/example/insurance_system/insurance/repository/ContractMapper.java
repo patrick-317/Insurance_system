@@ -23,7 +23,5 @@ public interface ContractMapper {
 
     void deleteContract(Integer customerId, Integer insuranceId);
 
-    List<Contract> findByContractStatus(ContractStatus contractStatus);
 
-    Optional<Contract> findById(int contractId);
 }
