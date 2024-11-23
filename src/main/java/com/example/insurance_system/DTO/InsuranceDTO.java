@@ -15,5 +15,15 @@ public class InsuranceDTO {
     private String term;
     private int maxAge;
     private String exclusions;
-    private InsuranceType insuranceType;
+    private InsuranceType type;
+    public InsuranceDTO(String name, String description, String premium, String coverage, String term, int maxAge, String exclusions, InsuranceType type){
+        this.name = name;
+        this.description = description;
+        this.premium = premium;
+        this.coverage = coverage;
+        this.term = term;
+        this.maxAge = maxAge;
+        this.exclusions = exclusions;
+        this.type = type;
+    }
 }
