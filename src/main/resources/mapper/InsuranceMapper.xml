@@ -23,4 +23,9 @@
         WHERE id = #{id}
     </select>
 
+    <insert id="addNewInsurance" parameterType="com.example.insurance_system.insurance.entity.Insurance">
+        INSERT INTO insurance(name, description, premium, coverage, term, maxAge, exclusions, type)
+        VALUES (#{name}, #{description}, #{premium}, #{coverage}, #{term}, #{maxAge}, #{exclusions}, #{type})
+    </insert>
+
 </mapper>

@@ -1,0 +1,30 @@
+/* 보험금 지급 관리 */
+.payout-container {
+    padding: 20px;
+  }
+  
+  .payout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .payout-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .payout-table {
+    margin-top: 20px;
+  }
+  
+  .payout-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .payout-actions button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
