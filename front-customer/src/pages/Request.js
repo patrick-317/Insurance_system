@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/request.css'
+import { requestPayout } from '../services/api';
 
 const Request = () => {
   const [customerId, setCustomerId] = useState('');
@@ -9,21 +10,8 @@ const Request = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 요청 바디 데이터
-    const requestBody = {
-      customerId,
-      insuranceId,
-    };
-
     try {
-      const response = await fetch('/api/insurance/request', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody),
-      });
-
+      const response = await requestPayout(customerId, insuranceId);
       if (response.ok) {
         const data = await response.json();
         setResponseMessage(`Request successful: ${data.message}`);
@@ -32,13 +20,13 @@ const Request = () => {
         setResponseMessage(`Error: ${errorData.message}`);
       }
     } catch (error) {
-      setResponseMessage('Failed to send request. Please try again later.');
+      setResponseMessage('요청 실패 잠시 후 이용해주세요');
     }
   };
 
   return (
     <div className="request-container">
-      <h1>Insurance Payout Request</h1>
+      <h1>보험금 지급 요청</h1>
       <form onSubmit={handleSubmit} className="request-form">
         <label>
           Customer ID:
@@ -60,7 +48,7 @@ const Request = () => {
             required
           />
         </label>
-        <button type="submit">Submit Request</button>
+        <button type="submit">지급 요청</button>
       </form>
       {responseMessage && <p className="response-message">{responseMessage}</p>}
     </div>

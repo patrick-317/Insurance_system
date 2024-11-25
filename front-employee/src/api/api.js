@@ -42,7 +42,7 @@ export const approveInsuranceRequest = async (contractId) => {
 // 보험 가입 거절
 export const rejectInsuranceRequest = async (requestId) => {
   try {
-    const response = await axios.put(`${API_BASE_URL}/insurance/reject`, { requestId });
+    const response = await axios.put(`${API_BASE_URL}/underwriting/reject/${requestId}`);
     console.log('Insurance request rejected successfully:', response.data);
     return response.data;
   } catch (error) {

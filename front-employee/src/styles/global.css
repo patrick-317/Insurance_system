@@ -23,7 +23,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #99adef;
     color: white;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
@@ -57,7 +57,7 @@ body {
   }
   
   table th {
-    background-color: #007bff;
+    background-color: #99adef;
     color: white;
   }
   
