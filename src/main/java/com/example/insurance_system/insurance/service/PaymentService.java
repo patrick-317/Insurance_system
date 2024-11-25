@@ -6,6 +6,7 @@ import com.example.insurance_system.insurance.repository.PaymentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -36,7 +37,7 @@ public class PaymentService {
         payment.setCustomerId(customerId);
         payment.setInsuranceId(insuranceId);
         payment.setAmount(premium); // 보험료를 그대로 String으로 설정
-        payment.setStatus("REQUESTED");
+        payment.setStatus("PENDING");
 
         // 지급 요청 저장
         paymentMapper.insertPayment(payment);

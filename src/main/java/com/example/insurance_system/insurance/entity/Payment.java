@@ -13,6 +13,6 @@ public class Payment {
     private Integer customerId;
     private Integer insuranceId;
     private String amount;
-    private LocalDate paymentDate;
+    private String paymentDate;
     private String status;  // 'PENDING', 'APPROVED', 'REJECTED'
 }

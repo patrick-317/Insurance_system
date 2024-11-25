@@ -1,0 +1,20 @@
+/* 보험 가입 관리 */
+.subscription-container {
+    padding: 20px;
+  }
+  
+  .subscription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .subscription-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .subscription-table {
+    margin-top: 20px;
+  }

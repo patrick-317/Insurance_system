@@ -34,4 +34,16 @@
         DELETE FROM contract
         WHERE customerId = #{customerId} AND insuranceId = #{insuranceId}
     </delete>
+
+    <!-- 계약 상태가 PENDING인 계약 조회 -->
+    <select id="findByContractStatus" resultType="com.example.insurance_system.insurance.entity.Contract">
+        SELECT *
+        FROM contract
+        WHERE contractStatus = #{contractStatus};
+    </select>
+
+    <!-- Add findById statement -->
+    <select id="findById" resultType="com.example.insurance_system.insurance.entity.Contract">
+        SELECT * FROM contract WHERE id = #{contractId}
+    </select>
 </mapper>

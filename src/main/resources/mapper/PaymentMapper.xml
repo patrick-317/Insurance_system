@@ -8,6 +8,7 @@
         VALUES (#{customerId}, #{insuranceId}, #{amount}, #{status})
     </insert>
 
+
     <!-- 지급 내역 조회 (ID로 지급 내역 조회) -->
     <select id="selectPaymentById" parameterType="java.lang.Integer" resultType="com.example.insurance_system.insurance.entity.Payment">
         SELECT * FROM payment WHERE id = #{id}

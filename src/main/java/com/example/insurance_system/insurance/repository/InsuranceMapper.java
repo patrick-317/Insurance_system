@@ -1,5 +1,6 @@
 package com.example.insurance_system.insurance.repository;
 
+import com.example.insurance_system.DTO.InsuranceDTO;
 import com.example.insurance_system.insurance.entity.Insurance;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,4 +13,5 @@ public interface InsuranceMapper {
     BigDecimal selectPremiumByInsuranceId(Integer insuranceId);
     Insurance findById(int insuranceId);
     Insurance getInsuranceById(Integer insuranceId);
+    int addNewInsurance(InsuranceDTO insuranceDTO);
 }
