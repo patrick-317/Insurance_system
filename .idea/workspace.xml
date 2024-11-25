@@ -4,111 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7ea867d-1f97-45a8-a911-5f309bbd2070" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front-customer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/components/Sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/pages/InsuranceInquiry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/pages/ProductSubscription.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/pages/Request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/services/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/claimProcessing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/contractManagement.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/customerManagement.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/insuranceInquiry.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/productCatalog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/productSubscription.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/request.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-customer/src/styles/sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/api/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/components/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/pages/CreateInsurance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/pages/ManagePayouts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/pages/ManageSubscriptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/styles/CreateInsurance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/styles/ManagePayouts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/styles/ManageSubscriptions.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/styles/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-employee/src/styles/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/controller/InsuranceDevelopController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/InsuranceDevelopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/repository/InsuranceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/insurance_system/insurance/repository/InsuranceMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/mapper/contractMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mapper/contractMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/mapper/customerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mapper/customerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/mapper/insuranceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mapper/insuranceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/DTO/InsuranceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/DTO/InsuranceDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/InsuranceSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/InsuranceSystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/repository/InsuranceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/repository/InsuranceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/insurance_system/insurance/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/InsuranceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/InsuranceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PaymentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PaymentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/contractMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/contractMapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d7ea867d-1f97-45a8-a911-5f309bbd2070" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectId" id="2pKHw5Y1CqRixhvRrn5pjFF6kzq" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showModules" value="false" />
@@ -125,7 +38,7 @@
     "Spring Boot.InsuranceSystemApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/projects/Insurance_system-main",
+    "last_opened_file_path": "C:/projects/Insurance_system_webApp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -179,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732362319492</updated>
       <workItem from="1732362321100" duration="1907000" />
+      <workItem from="1732508083067" duration="13000" />
     </task>
     <servers />
   </component>
