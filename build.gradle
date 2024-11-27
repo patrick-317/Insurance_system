@@ -42,3 +42,7 @@ tasks.named('processResources') {
         include 'mapper/**/*.xml'
     }
 }
+
+tasks.named('processResources') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
