@@ -12,16 +12,14 @@ import java.util.Optional;
 
 @Mapper
 public interface ContractMapper {
+    List<Contract> selectContractList();
     public void insertContract(ContractDTO contractDTO);
     boolean checkCustomerInsuranceContract(Integer customerId, Integer insuranceId);
-
     Contract getContractByCustomerAndInsurance(Integer customerId, Integer insuranceId);
-
     void insertContract(Contract contract);
-
     void updateContract(Contract contract);
-
     void deleteContract(Integer customerId, Integer insuranceId);
+    Contract findById(Integer contractId);
 
 
 }
