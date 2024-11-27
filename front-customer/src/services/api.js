@@ -62,11 +62,11 @@ export const requestPayout = async (customerId, insuranceId) => {
       customerId,
       insuranceId,
     });
+
     console.log('Payout request successful:', response.data);
-    return response.data;
+    return response.data; // JSON 데이터 반환
   } catch (error) {
-    console.error('Payout request failed:', error);
-    alert('Failed to request payout. Please try again.');
-    return null;
+    console.error('Payout request failed:', error.response?.data || error.message);
+    throw error.response?.data || new Error('Unexpected error occurred.');
   }
 };

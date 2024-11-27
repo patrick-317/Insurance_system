@@ -3,9 +3,9 @@ spring:
         name: insurance_system
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/insurance_system
+        url: jdbc:mysql://localhost:3306/boonsan2
         username: root
-        password: 12345678
+        password:
 mybatis:
     mapper-locations: classpath:mapper/*.xml
     type-aliases-package: com.example.insurance_system.insurance.entity

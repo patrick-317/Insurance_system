@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/request.css'
+import '../styles/request.css';
 import { requestPayout } from '../services/api';
 
 const Request = () => {
@@ -11,16 +11,18 @@ const Request = () => {
     e.preventDefault();
 
     try {
-      const response = await requestPayout(customerId, insuranceId);
-      if (response.ok) {
-        const data = await response.json();
-        setResponseMessage(`Request successful: ${data.message}`);
+      const data = await requestPayout(customerId, insuranceId);
+
+      if (data) {
+        setResponseMessage(
+          `요청 성공 : Status - ${data.status}, Amount - ${data.amount}`
+        );
       } else {
-        const errorData = await response.json();
-        setResponseMessage(`Error: ${errorData.message}`);
+        setResponseMessage('Error: No response data from the server.');
       }
     } catch (error) {
-      setResponseMessage('요청 실패 잠시 후 이용해주세요');
+      console.error('Request failed:', error);
+      setResponseMessage(`요청 실패: ${error.message || '고객 아이디와 보험 아이디를 확인 해주세요'}`);
     }
   };
 
