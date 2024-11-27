@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getInsurancePayments, approveInsurancePayment, rejectInsurancePayment } from '../api/api.js'; // API 함수 임포트
+import {
+  getInsurancePayments,
+  approveInsurancePayment,
+  rejectInsurancePayment,
+} from '../api/api.js'; // API 함수 임포트
 
 const ManagePayouts = () => {
   const [payouts, setPayouts] = useState([]); // 요청 목록
@@ -57,7 +61,7 @@ const ManagePayouts = () => {
               <th>요청 ID</th>
               <th>고객 ID</th>
               <th>보험 ID</th>
-              <th>요청 날짜</th>
+              <th>지급 날짜</th>
               <th>상태</th>
               <th>액션</th>
             </tr>
@@ -68,8 +72,8 @@ const ManagePayouts = () => {
                 <td>{payout.id}</td>
                 <td>{payout.customerId}</td>
                 <td>{payout.insuranceId}</td>
-                <td>{payout.contractDate}</td>
-                <td>{payout.contractStatus}</td>
+                <td>{payout.paymentDate}</td>
+                <td>{payout.status}</td>
                 <td>
                   <button onClick={() => setSelectedPayout(payout)}>상세 보기</button>
                 </td>
@@ -86,9 +90,9 @@ const ManagePayouts = () => {
           <p><strong>요청 ID:</strong> {selectedPayout.id}</p>
           <p><strong>고객 ID:</strong> {selectedPayout.customerId}</p>
           <p><strong>보험 ID:</strong> {selectedPayout.insuranceId}</p>
-          <p><strong>요청 날짜:</strong> {selectedPayout.contractDate}</p>
-          <p><strong>월 보험료:</strong> {selectedPayout.premium}</p>
-          <p><strong>상태:</strong> {selectedPayout.contractStatus}</p>
+          <p><strong>지급 날짜:</strong> {selectedPayout.paymentDate}</p>
+          <p><strong>지급 금액:</strong> {selectedPayout.amount}</p>
+          <p><strong>상태:</strong> {selectedPayout.status}</p>
           <button onClick={() => handleApprove(selectedPayout.id)}>승인</button>
           <button onClick={() => handleReject(selectedPayout.id)}>거절</button>
         </div>

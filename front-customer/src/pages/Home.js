@@ -15,7 +15,7 @@ const Home = () => {
           </Link>
         </div> */}
         <div className="card">
-          <h2>보험 조회</h2>
+          <h2>보험 조회 및 가입</h2>
           <Link to="/inquiry" className="card-button">
             바로 가기
           </Link>

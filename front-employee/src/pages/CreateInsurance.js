@@ -123,9 +123,9 @@ const CreateInsurance = () => {
             value={formData.insuranceType}
             onChange={handleChange}
           >
-            <option value="LIFE_INSURANCE">생명보험</option>
-            <option value="HEALTH_INSURANCE">건강보험</option>
-            <option value="AUTO_INSURANCE">제 3보험</option>
+            <option value="LIFE_INSURANCE">생명 보험</option>
+            <option value="DAMAGE_INSURANCE">손해 보험</option>
+            <option value="THIRD_INSURANCE">제 3보험</option>
           </select>
         </label>
         <button type="submit">보험 개발</button>
