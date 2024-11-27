@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.insurance_system.insurance.repository.UnderwritingMapper">
+
+    <!-- 계약 상태가 PENDING인 계약 조회 -->
+    <select id="findByContractStatus" resultType="com.example.insurance_system.insurance.entity.Contract">
+        SELECT *
+        FROM contract
+        WHERE contractStatus = #{contractStatus};
+    </select>
+
+    <!-- Add findById statement -->
+    <select id="findById" resultType="com.example.insurance_system.insurance.entity.Contract">
+        SELECT * FROM contract WHERE id = #{contractId}
+    </select>
+
+    <!-- 계약 정보 업데이트 -->
+    <update id="updateContract" parameterType="com.example.insurance_system.insurance.entity.Contract">
+        UPDATE contract
+        SET contractDate = #{contractDate}, premium = #{premium}, contractStatus = #{contractStatus}
+        WHERE customerId = #{customerId} AND insuranceId = #{insuranceId}
+    </update>
+</mapper>

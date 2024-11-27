@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.insurance_system.insurance.repository.InsuranceMapper">
+
+    <select id="selectInsuranceList" resultType="com.example.insurance_system.insurance.entity.Insurance">
+        SELECT *
+        FROM insurance
+    </select>
+    <select id="findByType" resultType="com.example.insurance_system.insurance.entity.Insurance">
+        SELECT *
+        FROM insurance
+        WHERE insuranceType = #{type}
+    </select>
+    <!-- 보험 정보 조회 -->
+    <select id="getInsuranceById" resultType="com.example.insurance_system.insurance.entity.Insurance">
+        SELECT id, name, premium
+        FROM insurance
+        WHERE id = #{insuranceId}
+    </select>
+    <select id="findById" resultType="com.example.insurance_system.insurance.entity.Insurance">
+        SELECT *
+        FROM insurance
+        WHERE id = #{id}
+    </select>
+
+    <insert id="addNewInsurance" parameterType="com.example.insurance_system.insurance.entity.Insurance">
+        INSERT INTO insurance(name, description, premium, coverage, term, maxAge, exclusions, insurancetype)
+        VALUES (#{name}, #{description}, #{premium}, #{coverage}, #{term}, #{maxAge}, #{exclusions}, #{insurancetype})
+    </insert>
+
+</mapper>

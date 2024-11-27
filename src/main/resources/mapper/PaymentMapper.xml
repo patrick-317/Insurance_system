@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.insurance_system.insurance.repository.PaymentMapper">
+
+    <!-- 보험금 지급 요청 저장 -->
+    <insert id="insertPayment" parameterType="com.example.insurance_system.insurance.entity.Payment">
+        INSERT INTO payment (customer_id, insurance_id, amount, status)
+        VALUES (#{customerId}, #{insuranceId}, #{amount}, #{status})
+    </insert>
+
+
+    <!-- 지급 내역 조회 (ID로 지급 내역 조회) -->
+    <select id="selectPaymentById" parameterType="java.lang.Integer" resultType="com.example.insurance_system.insurance.entity.Payment">
+        SELECT * FROM payment WHERE id = #{id}
+    </select>
+
+    <!-- 지급 내역 상태 업데이트 (승인/거절) -->
+    <update id="updatePayment" parameterType="com.example.insurance_system.insurance.entity.Payment">
+        UPDATE payment
+        SET status = #{status}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 지급 내역 조회 (모든 지급 내역 조회) -->
+    <select id="selectAllPayments" resultType="com.example.insurance_system.insurance.entity.Payment">
+        SELECT * FROM payment
+    </select>
+
+</mapper>
+

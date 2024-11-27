@@ -1,0 +1,126 @@
+/* src/styles/insuranceInquiry.css */
+.insurance-inquiry {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .inquiry-form {
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .inquiry-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .inquiry-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .inquiry-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .inquiry-button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+/* src/styles/insuranceInquiry.css */
+
+/* src/styles/insuranceInquiry.css */
+
+/* 전체 컨테이너 */
+.insurance-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 카드 중앙 정렬 */
+}
+
+/* 카드 스타일 */
+.insurance-card {
+  width: 100%;
+  max-width: 600px; /* 카드 최대 너비 제한 */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.insurance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 텍스트 스타일 */
+.insurance-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+.insurance-card p strong {
+  color: #000;
+}
+
+/* 제목 스타일 */
+.insurance-details h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* 버튼 스타일 */
+.select-insurance-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.select-insurance-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.select-insurance-button:active {
+  background-color: #004080;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.select-insurance-button:focus {
+  outline: none;
+}
