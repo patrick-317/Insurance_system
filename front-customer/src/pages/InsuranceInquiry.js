@@ -51,8 +51,8 @@ const InsuranceInquiry = () => {
           >
             <option value="">선택</option>
             <option value="LIFE_INSURANCE">생명 보험</option>
-            <option value="DAMAGE_INSURANCE">건강 보험</option>
-            <option value="3">제 3보험</option>
+            <option value="DAMAGE_INSURANCE">손해 보험</option>
+            <option value="THIRD_INSURANCE">제 3보험</option>
           </select>
         </label>
         <button type="submit" className="inquiry-button">
