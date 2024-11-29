@@ -26,6 +26,12 @@ const Home = () => {
             바로 가기
           </Link>
         </div>
+        <div className="card">
+          <h2>사고 조사 요청</h2>
+          <Link to="/requestInvestment" className="card-button">
+            바로 가기
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Request from './pages/Request';
+import RequestInvestment from './pages/RequestInvestment';
 import ProductSubscription from './pages/ProductSubscription';
 import Inquiry from './pages/InsuranceInquiry';
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/inquiry" element={<Inquiry />} />
             <Route path="/request" element={<Request />} />
+            <Route path="/requestInvestment" element={<RequestInvestment />} />
           </Routes>
         </main>
         <Footer />
