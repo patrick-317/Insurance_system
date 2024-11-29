@@ -70,3 +70,31 @@ export const requestPayout = async (customerId, insuranceId) => {
     throw error.response?.data || new Error('Unexpected error occurred.');
   }
 };
+
+// **여기서부터 새로운 함수 추가**
+
+// 계약 목록 조회
+export const fetchContracts = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/requestInvestment/contracts`);
+    console.log('Contracts fetched:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching contracts:', error);
+    throw error;
+  }
+};
+
+// 사고 조사 요청
+export const requestAccidentInvestigation = async (contractId) => {
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}/requestInvestment/contracts/${contractId}/request`
+    );
+    console.log('Accident investigation requested:', response.data);
+    return response.data; // 서버로부터의 메시지 반환
+  } catch (error) {
+    console.error('Error requesting accident investigation:', error);
+    throw error;
+  }
+};
