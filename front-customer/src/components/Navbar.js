@@ -16,6 +16,8 @@ const Navbar = () => {
         {/* <li><a href="/claims">Claims</a></li> */}
         <li><a href="/inquiry">보험 조회 및 가입</a></li>
         <li><a href="/request">보험금 지급 요청</a></li>
+        <li><a href="/requestInvestment">사고 조사 요청</a></li>
+
       </ul>
     </nav>
   );
