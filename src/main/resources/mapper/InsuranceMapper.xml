@@ -24,8 +24,8 @@
     </select>
 
     <insert id="addNewInsurance" parameterType="com.example.insurance_system.insurance.entity.Insurance">
-        INSERT INTO insurance(name, description, premium, coverage, term, maxAge, exclusions, insurancetype)
-        VALUES (#{name}, #{description}, #{premium}, #{coverage}, #{term}, #{maxAge}, #{exclusions}, #{insurancetype})
+        INSERT INTO insurance(name, description, premium, coverage, term, maxAge, exclusions, insuranceType)
+        VALUES (#{name}, #{description}, #{premium}, #{coverage}, #{term}, #{maxAge}, #{exclusions}, #{insuranceType})
     </insert>
 
 </mapper>
