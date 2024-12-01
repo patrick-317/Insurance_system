@@ -1,0 +1,41 @@
+<configuration>
+    <!-- 콘솔에 출력되는 로그 설정 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 파일에 기록되는 로그 설정 -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/application-errors.log</file> <!-- 로그 파일 경로 설정 -->
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- HTTP 4xx, 5xx 에러에 대한 로그 설정 -->
+    <appender name="HTTP_ERROR_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/http-errors.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 로그 레벨 설정 -->
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- 스프링 웹 요청 관련 로거 설정 -->
+    <logger name="org.springframework" level="info">
+        <appender-ref ref="HTTP_ERROR_FILE" />
+    </logger>
+
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="info">
+        <appender-ref ref="HTTP_ERROR_FILE" />
+    </logger>
+</configuration>
