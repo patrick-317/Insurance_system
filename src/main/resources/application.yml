@@ -5,7 +5,9 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost:3306/insurance_system
         username: root
-        password: 12345678
+        password: 1234
+    jmx:
+        enabled: false
 mybatis:
     mapper-locations: classpath:mapper/*.xml
     type-aliases-package: com.example.insurance_system.insurance.entity
@@ -13,4 +15,15 @@ mybatis:
         map-underscore-to-camel-case: true
 server:
     port: 8080
+logging:
+    file:
+        name: logs/application.log
+    level:
+        root: error
+        org:
+            springframework: info
+            springframework.web: debug
+            springframework.boot.autoconfigure.web: debug
+
+
 
