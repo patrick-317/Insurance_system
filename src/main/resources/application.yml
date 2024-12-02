@@ -16,8 +16,6 @@ mybatis:
 server:
     port: 8080
 logging:
-    file:
-        name: logs/application.log
     level:
         root: error
         org:
