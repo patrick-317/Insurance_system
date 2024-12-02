@@ -22,6 +22,3 @@ logging:
             springframework: info
             springframework.web: debug
             springframework.boot.autoconfigure.web: debug
-
-
-
