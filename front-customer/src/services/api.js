@@ -10,9 +10,9 @@ export const login = async (email, password) => {
       email,
       password,
     });
-    const { token } = response.data;
-    console.log('Login successful:', token);
-    return token;
+    const success = response.data;
+    console.log(success);
+    return success;
   } catch (error) {
     console.error('Login failed:', error);
     return null;

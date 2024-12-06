@@ -1,19 +1,25 @@
-// src/pages/Home.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/home.css'; // 스타일링 파일
+import { Link, useNavigate } from 'react-router-dom';
+import '../styles/home.css';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('customerId'); // customerId 삭제
+    alert('Logged out successfully!');
+    navigate('/login'); // 로그인 페이지로 이동
+  };
+
   return (
     <div className="home">
-      <h1>Welcome</h1>
+      <div className="header">
+        <h1>Welcome</h1>
+        <button onClick={handleLogout} className="logout-button">
+          Logout
+        </button>
+      </div>
       <div className="dashboard">
-        {/* <div className="card">
-          <h2>보험 가입</h2>
-          <Link to="/subscription" className="card-button">
-            바로 가기
-          </Link>
-        </div> */}
         <div className="card">
           <h2>보험 조회 및 가입</h2>
           <Link to="/inquiry" className="card-button">

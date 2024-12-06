@@ -1,36 +1,75 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
+import Home from './pages/Home';
 import Request from './pages/Request';
-import RequestInvestment from './pages/RequestInvestment';
+import InsuranceInquiry from './pages/InsuranceInquiry';
 import ProductSubscription from './pages/ProductSubscription';
-import Inquiry from './pages/InsuranceInquiry';
+import RequestInvestment from './pages/RequestInvestment';
+import ProtectedRoute from './components/ProtectedRoute';
+import Layout from './components/Layout';
 
-
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="app">
-        <Navbar />
-        <Sidebar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/subscription" element={<ProductSubscription />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/inquiry" element={<Inquiry />} />
-            <Route path="/request" element={<Request />} />
-            <Route path="/requestInvestment" element={<RequestInvestment />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* 로그인 페이지 */}
+        <Route path="/login" element={<Login />} />
+
+        {/* 로그인 여부에 따라 접근 가능한 페이지 */}
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <Home />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/request"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <Request />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/inquiry"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <InsuranceInquiry />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/subscription"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <ProductSubscription />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/requestInvestment"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <RequestInvestment />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
     </Router>
   );
-}
+};
 
 export default App;
