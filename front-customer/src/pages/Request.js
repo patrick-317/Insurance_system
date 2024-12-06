@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/request.css';
 import { requestPayout } from '../services/api';
 
@@ -6,6 +6,13 @@ const Request = () => {
   const [customerId, setCustomerId] = useState('');
   const [insuranceId, setInsuranceId] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
+
+  useEffect(() => {
+    const storedCustomerId = localStorage.getItem('customerId');
+    if (storedCustomerId) {
+      setCustomerId(storedCustomerId); // 세션에서 customerId 읽기
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,9 +42,7 @@ const Request = () => {
           <input
             type="text"
             value={customerId}
-            onChange={(e) => setCustomerId(e.target.value)}
-            placeholder="Enter Customer ID"
-            required
+            readOnly // 수정 불가
           />
         </label>
         <label>

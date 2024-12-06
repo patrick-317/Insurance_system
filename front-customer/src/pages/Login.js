@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { login } from '../services/api';
 import '../styles/login.css'; // 스타일링 파일이 있다면 import 해주세요.
 
@@ -7,8 +7,15 @@ const Login = () => {
     email: '',
     password: '',
   });
+  const [loading, setLoading] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 관리
+  useEffect(() => {
+    const customerId = localStorage.getItem('customerId');
+    if (customerId) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,55 +27,67 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await login(credentials.email, credentials.password); // 수정된 필드 이름
-    if (result) {
-      alert('Login successful!');
-      setIsLoggedIn(true); // 로그인 상태로 변경
-    } else {
-      alert('Login failed! Please try again.');
+    setLoading(true);
+    try {
+      const result = await login(credentials.email, credentials.password);
+      if (result) {
+        alert('Login successful!');
+        console.log(result)
+        localStorage.setItem('customerId', result.id);
+        window.location.href = '/';
+      } else {
+        alert('Login failed! Please try again.');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('An error occurred during login. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleLogout = () => {
-    setIsLoggedIn(false); // 로그아웃 시 로그인 상태를 false로 변경
-    setCredentials({ email: '', password: '' }); // 입력 필드 초기화
+    localStorage.removeItem('customerId');
     alert('Logged out successfully!');
+    setIsLoggedIn(false);
+    window.location.href = '/login';
   };
 
   return (
     <div className="login-page">
-      <h1>{isLoggedIn ? 'Welcome!' : 'Login'}</h1>
+      <h1>{isLoggedIn ? 'Welcome Back!' : 'Login'}</h1>
       {isLoggedIn ? (
-        <div>
-          <p>You are logged in as {credentials.email}</p>
-          <button onClick={handleLogout} className="logout-button">
-            Logout
-          </button>
-        </div>
+        <button onClick={handleLogout} className="logout-button">
+          Logout
+        </button>
       ) : (
-        <form onSubmit={handleSubmit} className="login-form">
-          <label>
-            Email:
-            <input
-              type="text"
-              name="email"
-              value={credentials.email}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Password:
-            <input
-              type="password"
-              name="password"
-              value={credentials.password}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <button type="submit" className="login-button">Login</button>
-        </form>
+        loading ? (
+          <p>Loading...</p>
+        ) : (
+          <form onSubmit={handleSubmit} className="login-form">
+            <label>
+              Email:
+              <input
+                type="text"
+                name="email"
+                value={credentials.email}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Password:
+              <input
+                type="password"
+                name="password"
+                value={credentials.password}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        )
       )}
     </div>
   );
