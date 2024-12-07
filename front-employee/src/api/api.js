@@ -1,7 +1,7 @@
 // src/api.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://13.125.8.149:8080'; // 실제 API URL로 변경하세요
+const API_BASE_URL = 'http://3.39.250.140:8080'; // 실제 API URL로 변경하세요
 
 // 보험 개발 API 호출 함수
 export const createInsurance = async (insuranceData) => {
