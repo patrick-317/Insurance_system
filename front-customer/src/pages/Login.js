@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { login } from '../services/api';
 import '../styles/login.css'; // 스타일링 파일이 있다면 import 해주세요.
+import { useNavigate } from 'react-router-dom'; // 페이지 이동을 위해 추가
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
   });
   const [loading, setLoading] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate(); // 페이지 이동용 훅
 
   useEffect(() => {
     const customerId = localStorage.getItem('customerId');
@@ -32,7 +34,7 @@ const Login = () => {
       const result = await login(credentials.email, credentials.password);
       if (result) {
         alert('Login successful!');
-        console.log(result)
+        console.log(result);
         localStorage.setItem('customerId', result.id);
         window.location.href = '/';
       } else {
@@ -51,6 +53,10 @@ const Login = () => {
     alert('Logged out successfully!');
     setIsLoggedIn(false);
     window.location.href = '/login';
+  };
+
+  const handleSignupRedirect = () => {
+    navigate('/inquiry'); // 회원가입 페이지로 이동
   };
 
   return (
@@ -86,6 +92,13 @@ const Login = () => {
               />
             </label>
             <button type="submit" className="login-button">Login</button>
+            <button
+              type="button"
+              onClick={handleSignupRedirect}
+              className="login-button"
+            >
+              회원가입 및 보험가입
+            </button>
           </form>
         )
       )}
