@@ -40,21 +40,17 @@ const App = () => {
         <Route
           path="/inquiry"
           element={
-            <ProtectedRoute>
               <Layout>
                 <InsuranceInquiry />
               </Layout>
-            </ProtectedRoute>
           }
         />
         <Route
           path="/subscription"
           element={
-            <ProtectedRoute>
               <Layout>
                 <ProductSubscription />
               </Layout>
-            </ProtectedRoute>
           }
         />
         <Route
