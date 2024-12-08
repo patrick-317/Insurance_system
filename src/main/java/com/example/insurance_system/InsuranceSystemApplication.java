@@ -20,7 +20,7 @@ public class InsuranceSystemApplication {
             public void addCorsMappings(CorsRegistry registry) {
                 WebMvcConfigurer.super.addCorsMappings(registry);
                 registry.addMapping("/**")
-                        .allowedOrigins("http://3.39.250.140:3000","http://3.39.250.140:3001")
+                        .allowedOrigins("http://54.180.140.55:3000","http://54.180.140.55:3001")
                         .allowedMethods("GET","POST","PUT","DELETE","OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true)
