@@ -2,10 +2,16 @@ spring:
     application:
         name: insurance_system
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://insurancedb.cz4sqiw04pdz.ap-northeast-2.rds.amazonaws.com:3306/insurance_system?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-        username: admin
-        password: boonsan2
+        master:
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            jdbcUrl: jdbc:mysql://insurancedb.cz4sqiw04pdz.ap-northeast-2.rds.amazonaws.com:3306/insurance_system?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+            username: admin
+            password: boonsan2
+        replica:
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            jdbcUrl: jdbc:mysql://replicadb.cz4sqiw04pdz.ap-northeast-2.rds.amazonaws.com:3306/insurance_system?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+            username: admin
+            password: boonsan2
     jmx:
         enabled: false
     jpa:
