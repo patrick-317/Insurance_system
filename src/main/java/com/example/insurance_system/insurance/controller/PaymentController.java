@@ -1,5 +1,6 @@
 package com.example.insurance_system.insurance.controller;
 
+import com.example.insurance_system.DTO.PaymentDTO;
 import com.example.insurance_system.insurance.entity.Payment;
 import com.example.insurance_system.insurance.entity.PaymentRequest;
 import com.example.insurance_system.insurance.service.PaymentService;
@@ -17,7 +18,7 @@ public class PaymentController {
 
     // 보험금 지급 요청 (고객 ID와 보험 ID를 제공하면 지급 금액 자동 조회)
     @PostMapping("/request")
-    public Payment requestPayment(@RequestBody PaymentRequest paymentRequest) {
+    public Payment requestPayment(@RequestBody PaymentDTO paymentRequest) {
         System.out.println("Received payment request: " + paymentRequest);
         Integer customerId = paymentRequest.getCustomerId();
         Integer insuranceId = paymentRequest.getInsuranceId();
