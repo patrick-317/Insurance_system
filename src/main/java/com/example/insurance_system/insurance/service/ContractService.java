@@ -70,10 +70,6 @@ public class ContractService {
         return insurance;
     }
 
-    public boolean checkCustomerInsuranceContract(Integer customerId, Integer insuranceId) {
-        return contractMapper.checkCustomerInsuranceContract(customerId, insuranceId);
-    }
-
     public Contract getContractByCustomerAndInsurance(Integer customerId, Integer insuranceId) {
         Contract contract = contractMapper.getContractByCustomerAndInsurance(customerId, insuranceId);
 

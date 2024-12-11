@@ -2,7 +2,6 @@ package com.example.insurance_system.insurance.controller;
 
 import com.example.insurance_system.DTO.PaymentDTO;
 import com.example.insurance_system.insurance.entity.Payment;
-import com.example.insurance_system.insurance.entity.PaymentRequest;
 import com.example.insurance_system.insurance.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

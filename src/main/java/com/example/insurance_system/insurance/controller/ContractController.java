@@ -5,7 +5,9 @@ import com.example.insurance_system.DTO.CustomerDTO;
 import com.example.insurance_system.insurance.entity.Contract;
 import com.example.insurance_system.insurance.entity.Insurance;
 import com.example.insurance_system.insurance.service.ContractService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/contracts")
 public class ContractController {
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     private final ContractService contractService;
 
@@ -37,7 +41,9 @@ public class ContractController {
         try {
             CustomerDTO customer = contractDTO.getCustomerDTO();
             int insuranceId = contractDTO.getInsuranceId();
-
+            if (customer.getPassword() != null) {
+                customer.setPassword(passwordEncoder.encode(customer.getPassword()));
+            }
             contractService.applyForInsurance(customer, insuranceId);
             return ResponseEntity.ok("보험 가입요청이 성공적으로 완료되었습니다.");
         } catch (IllegalArgumentException e) {

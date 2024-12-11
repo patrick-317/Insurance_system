@@ -13,5 +13,8 @@
     <select id="findByIdAndPassword" resultType="com.example.insurance_system.insurance.entity.Customer">
         SELECT * FROM customer WHERE email = #{email} AND password = #{password}
     </select>
+    <select id="findByEmail" resultType="com.example.insurance_system.insurance.entity.Customer">
+        SELECT *  FROM customer WHERE email = #{email};
+    </select>
 
 </mapper>
