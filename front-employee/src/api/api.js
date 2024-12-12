@@ -6,7 +6,7 @@ const API_BASE_URL = 'http://54.180.140.55:8080'; // 실제 API URL로 변경하
 // 보험 개발 API 호출 함수
 export const createInsurance = async (insuranceData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/insurance/create`, insuranceData);
+    const response = await axios.post(`${API_BASE_URL}insurance_develop/add`, insuranceData);
     console.log('Insurance created successfully:', response.data);
     return response.data;
   } catch (error) {

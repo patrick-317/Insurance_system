@@ -4,7 +4,7 @@
 
     <!-- 보험금 지급 요청 저장 -->
     <insert id="insertPayment" parameterType="com.example.insurance_system.insurance.entity.Payment">
-        INSERT INTO payment (customer_id, insurance_id, amount, status)
+        INSERT INTO payment (customerid, insuranceid, amount, status)
         VALUES (#{customerId}, #{insuranceId}, #{amount}, #{status})
     </insert>
 
